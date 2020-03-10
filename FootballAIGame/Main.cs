@@ -10,7 +10,7 @@ namespace FootballAIGame
     public class Main : Game
     {
         GraphicsDeviceManager graphics;
-        World world;
+        Field field;
 
         public Main()
         {
@@ -28,7 +28,7 @@ namespace FootballAIGame
         {
             // TODO: Add your initialization logic here
             base.Initialize();
-            this.world = new World();
+            this.field = new Field();
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace FootballAIGame
         protected override void Update(GameTime gameTime)
         {
             // TODO: Add your update logic here
-            world.Update();
+            field.Update();
 
             base.Update(gameTime);
         }
@@ -75,7 +75,7 @@ namespace FootballAIGame
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
-            world.Draw();
+            field.Draw();
             Globals.spriteBatch.End();
 
             base.Draw(gameTime);

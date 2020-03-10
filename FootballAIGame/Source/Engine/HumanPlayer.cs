@@ -16,12 +16,12 @@ using Microsoft.Xna.Framework.Media;
 
 namespace FootballAIGame
 {
-    public class Basic2D
+    public class HumanPlayer2 :FootballPlayer
     {
         public Vector2 pos, dims;
         public Texture2D mySprite;
 
-        public Basic2D(string path, Vector2 pos, Vector2 dims)
+        public HumanPlayer2(string path, Vector2 pos, Vector2 dims)
         {
             this.pos = pos;
             this.dims = dims;
